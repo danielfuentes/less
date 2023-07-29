@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+/*===Proporcionado por Gustavo ===*/
+/*===  SASS===*/
+/*
+@mixin flexible($display, $justify, $align) {
+   display          : $display;
+   justify-content  : $justify;
+   align-items      : $align;  
+}
+
+@mixin font($size, $height, $weight) {
+    font-size       : $size;
+    line-height     : $height;
+    font-weight     : $weight;    
+}
+
+*/
+/*==========================================*/
+/*=== Aplicando creación de variables===*/
+/*body{
+    background-color: @colorFondo;
+}*/
+h1.titulo {
+  text-align: center;
+  color: white;
+  background-color: tomato;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 4rem;
+}
+h2.subtitulo {
+  color: white;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 2rem;
+  background-color: tomato;
+}
+/*Anidaciones*/
+nav.menu ul {
+  display: flex;
+  list-style-type: none;
+}
+nav.menu ul li a {
+  text-decoration: none;
+}
+nav.menu ul li a:hover {
+  color: red;
+}
+p {
+  font-family: Verdana;
+  font-size: 1.5rem;
+  text-align: justify;
+  border: 4px solid red;
+  color: white;
+  background-color: tomato;
+}
+p#particular {
+  font-family: Verdana;
+  font-size: 1.5rem;
+  text-align: justify;
+  border: 8px dotted green;
+  color: yellow;
+  background-color: tomato;
+}
+/*=== Funciones ===*/
+/*=== Aplicando ideas de trabajo usando Bootstrap===*/
+.bg-danger {
+  background-color: teal !important;
+}
+/*=== Apcando CSS al boton de la barra de navegación===*/
+._boton {
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+._boton:hover {
+  color: blue;
+  background-color: white;
+  box-shadow: 0px 0px 10px blue inset;
+}

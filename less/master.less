@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/*===Creando funciones ===*/
+/*===  SASS===*/
+/*
+@mixin flexible($display, $justify, $align) {
+   display          : $display;
+   justify-content  : $justify;
+   align-items      : $align;  
+}
+
+@mixin font($size, $height, $weight) {
+    font-size       : $size;
+    line-height     : $height;
+    font-weight     : $weight;    
+}
+
+*/
+/*==========================================*/
+
+/*=== Aplicando creación de variables===*/
+@colorFondo: tomato;
+@fuenteTitulos: 'Lato', sans-serif;
+@fuenteSubtitulos: Verdana;
+@colorLetra: red;
+/*body{
+    background-color: @colorFondo;
+}*/
+h1.titulo{
+    text-align: center;
+    color: white;
+    background-color: @colorFondo;
+    padding: 10px;
+    font-family: @fuenteTitulos;
+    font-size: 4rem;
+}
+h2.subtitulo{
+    color: white;
+    text-align: center;
+    font-family: @fuenteSubtitulos;
+    font-size: 2rem;
+    background-color: @colorFondo;
+}
+
+/*Anidaciones*/
+nav.menu{
+    
+    ul{
+        display: flex;
+        list-style-type: none;
+        li{
+            a{
+                text-decoration: none;
+                &:hover{
+                    color: @colorLetra;
+                }
+            }
+        }
+    }
+}
+
+
+//Funciones parametrizadas
+p{
+    .parrafoDestacado(white,4px,solid,red);
+}
+
+p#particular{
+    .parrafoDestacado(yellow,8px,dotted,green);
+}
+
+/*=== Funciones ===*/
+.parrafoDestacado(@colorLetra,@ancho,@tipo,@color){
+    font-family: @fuenteSubtitulos;
+    font-size: 1.5rem;
+    text-align: justify;
+    border: @ancho @tipo @color;
+    color: @colorLetra;
+    background-color: @colorFondo;
+}
+
+/*=== Aplicando ideas de trabajo usando Bootstrap===*/
+.bg-danger { 
+    background-color: teal !important;
+}
+/*=== Aplicando CSS al boton de la barra de navegación===*/
+._boton{
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 5px 10px;
+    &:hover{
+        color: blue;
+        background-color: white;
+        box-shadow: 0px 0px 10px blue inset;
+    }
+}
